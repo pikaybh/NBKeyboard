@@ -5,7 +5,7 @@ import Footer4HP from '../components/Footer4HomePage';
 function HomePage(){
     return(
         <div className="HomePage">
-            <ul>
+            <ul className="nothing">
                 <li><Link to='/main'>MainPage</Link></li>
                 <li><Link to='/career'>Career</Link></li>
                 <li></li>
