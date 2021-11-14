@@ -1,5 +1,76 @@
 .App {
+  height: 100vh;
+}
+
+.App {
   text-align: center;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px 0 40px;
+}
+
+.Footer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  bottom : 0;
+  padding: 40px 0;
+}
+
+.Footer4HP {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  padding: 30px 0;
+}
+
+.copyrights {
+  width: 300px;
+  margin: auto;
+}
+
+.rights {
+  margin: auto 40px;
+}
+
+.footer-item {
+  color: black;
+  text-decoration: underline;
+}
+
+.menu-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.menu-content {
+  font-size: x-large;
+  margin: 0 40px 0 0;
+}
+
+.menu-item {
+  color: grey;
+}
+
+.menu-item:hover {
+  color: black;
+}
+
+a {
+  text-decoration: none;
 }
 
 .App-logo {
