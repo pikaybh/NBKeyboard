@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import logo from '../static/NBKlogo.png';
 
-function MainPage(){
-    return(
+function MainPage() {
+    return (
         <div className="MainPage">
-            <Header/>
+            <Header />
             <h1>HelloWorld!</h1>
-            <Footer/>
+            <img className="titleImg" src={logo}/>
+            <Footer />
         </div>
     );
 }

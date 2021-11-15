@@ -9,6 +9,15 @@
   padding: 20px 0;
 }
 
+.logo {
+  margin-top: 16px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  fill: black;
+}
+
 .Header {
   display: flex;
   justify-content: space-between;
@@ -16,7 +25,6 @@
 }
 
 .Footer {
-  position: absolute;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -64,8 +72,19 @@
   margin: 0 40px 0 0;
 }
 
+@media screen and (max-width: 768px) {
+  .menu-bar {
+    flex-wrap: wrap;
+  }
+
+  .menu-content {
+    margin: 0 40px 8px 0;
+  }
+}
+
 .menu-item {
   color: grey;
+  transition: 0.3s;
 }
 
 .menu-item:hover {
@@ -74,6 +93,19 @@
 
 a {
   text-decoration: none;
+}
+
+.context {
+  max-width: 80%;
+  margin: auto;
+}
+
+.img {
+  float: right;
+}
+
+hr {
+  max-width: 80%;
 }
 
 .App-logo {
