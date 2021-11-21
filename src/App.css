@@ -8,7 +8,7 @@
   transition: 0.3s;
 }
 
-.logo:hover #path0 {
+.logo:hover #image0 {
   fill: linear-gradient(to right,red,green,blue) left/200% 100%;
   animation:change 2s infinite linear alternate;
 }
@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   bottom : 0;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 .Footer4HP {
@@ -42,10 +42,19 @@
   bottom: 0;
   padding: 30px 0;
 }
-
 .copyrights {
-  width: 300px;
-  margin: auto;
+  margin: 0 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer {
+    padding: 10px 0;
+  }
+
+  .copyrights {
+    width: 600px;
+    margin: 10px auto;
+  }
 }
 
 .rights {
@@ -127,7 +136,7 @@ a {
   width: 210px;
   height: 300px;
   position: absolute;
-  border: 1px solid #555;
+  border: 1px solid black;
   border-radius: 8px;
   left: 50%;
   top: 50%;
