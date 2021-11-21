@@ -3,19 +3,20 @@
   text-align: center;
 }
 
-.nothing {
-  list-style: none;
-  margin: 0;
-  padding: 20px 0;
-}
-
 .logo {
   margin-top: 16px;
   transition: 0.3s;
 }
 
-.logo:hover {
-  fill: black;
+.logo:hover #path0 {
+  fill: linear-gradient(to right,red,green,blue) left/200% 100%;
+  animation:change 2s infinite linear alternate;
+}
+
+@keyframes change {
+  to {
+    background-position:right;
+  }
 }
 
 .Header {
@@ -95,6 +96,86 @@ a {
   text-decoration: none;
 }
 
+.homepage-title {
+  margin-top: 10%;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.keyboard {
+  width: 210px;
+  height: 300px;
+  position: absolute;
+  border: 1px solid #555;
+  border-radius: 8px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+
+.keylayout {
+  width: 168px;
+  height: 224px;
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+.keycab {
+  width: 56px; 
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboarder {
+  width: 54px; 
+  height: 54px;
+  border: 1px solid #000; 
+  border-radius: 5px; 
+  background-color: #cccccc;
+}
+
+.keyboarder:hover {
+  width: 50px;
+  height: 50px;
+}
+
+.keylabels {
+  position: relative;
+  left: 5.5px;
+  top: 3px; 
+  width: 77%; 
+  height: 77%;
+  border-radius: 3px;
+  background-color: white;
+  text-align: start;
+  font-size: 3%;
+  word-break:break-all;
+}
+
 .context {
   max-width: 80%;
   margin: auto;
@@ -102,6 +183,7 @@ a {
 
 .img {
   float: right;
+  max-width: 30%;
 }
 
 hr {

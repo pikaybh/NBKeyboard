@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import logo from '../static/NBKlogo.png';
+import logo from '../assets/images/nobaku1.png';
 
 function MainPage() {
     return (

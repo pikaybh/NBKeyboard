@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as NBKlogo } from '../static/NBKlogo.svg';
+import { ReactComponent as NBKlogo } from '../assets/images/NBKlogo.svg';
 
 function Header() {
     let main, career, test;
@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <div className="Header">
-            <Link to="/"><NBKlogo className="logo" width="60" height="60" fill="grey"/></Link>
+            <Link to="/"><NBKlogo className="logo" width="60" height="60"/></Link>
             <ul className="menu-bar">
                 <li className="menu-content"><Link to='/main' className='menu-item' style={main}>main</Link></li>
                 <li className="menu-content"><Link to='/career' className='menu-item' style={career}>career</Link></li>
