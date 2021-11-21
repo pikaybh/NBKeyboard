@@ -141,8 +141,8 @@ a {
 .keylayout {
   width: 168px;
   height: 224px;
-  background-color: gray;
-  border: gray solid 1px;
+  background-color: #666;
+  border: #666 solid 1px;
   border-radius: 6px;
   display: flex;
   flex-wrap: wrap;  
@@ -159,7 +159,7 @@ a {
 .keyboarder {
   width: 54px; 
   height: 54px;
-  border: 1px solid #000; 
+  border: 1px solid #666; 
   border-radius: 5px; 
   background-color: #cccccc;
 }
@@ -180,6 +180,7 @@ a {
   text-align: start;
   font-size: 3%;
   word-break:break-all;
+  color: #666;
 }
 
 .context {
