@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 import Footer4HP from '../components/Footer4HomePage';
 
 function HomePage() {
     return (
         <div className="HomePage">
+            <Header />
             <h1 className="homepage-title">NBKeyboard 짱짱맨</h1>
             <div className="keyboard">
                 <div className="keylayout">
