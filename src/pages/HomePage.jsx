@@ -7,89 +7,66 @@ function HomePage() {
     return (
         <div className="HomePage">
             <Header />
-            <h1 className="homepage-title">NBKeyboard 짱짱맨</h1>
+            <h1 className="homepage-title">Welcome to NBK!</h1>
             <div className="keyboard">
                 <div className="keylayout">
-                    <Link to='/main' className="keycab">
+                    <Link to='/intro' className="keycab">
                         <div className="keyboarder">
                             <div className="keylabels">
-                                MainPage
+                                NBK<br/>소개
+                            </div>
+                        </div>
+                    </Link>
+                    <Link to='/products' className="keycab">
+                        <div className="keyboarder">
+                            <div className="keylabels">
+                                Products
+                            </div>
+                        </div>
+                    </Link>
+                    <Link to='/contact' className="keycab">
+                        <div className="keyboarder">
+                            <div className="keylabels">Contact
                             </div>
                         </div>
                     </Link>
                     <Link to='/career' className="keycab">
                         <div className="keyboarder">
                             <div className="keylabels">
-                                Career
+                                NBK<br/>인원
                             </div>
                         </div>
                     </Link>
-                    <Link to='/testpage' className="keycab">
+                    <div className="keycab">
+                    </div>
+                    <Link to='/notice' className="keycab">
                         <div className="keyboarder">
-                            <div className="keylabels">test
+                            <div className="keylabels">소식
                             </div>
                         </div>
                     </Link>
-                    
-                    <Link to='/main' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">
-                                MainPage
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/career' className="keycab">
+                    <Link to='/history' className="keycab">
                         <div className="keyboarder">
                             <div className="keylabels">
-                                Career
+                                회사<br/>연혁
                             </div>
                         </div>
                     </Link>
-                    <Link to='/testpage' className="keycab">
+                    <div className="keycab">
+                    </div>
+                    <Link to='/review' className="keycab">
                         <div className="keyboarder">
-                            <div className="keylabels">test
+                            <div className="keylabels">후기
                             </div>
                         </div>
                     </Link>
-                    
-                    <Link to='/main' className="keycab">
+                    <div className="keycab">
+                    </div>
+                    <div className="keycab">
+                    </div>
+                    <Link to='/questions' className="keycab">
                         <div className="keyboarder">
-                            <div className="keylabels">
-                                MainPage
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/career' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">
-                                Career
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/testpage' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">test
-                            </div>
-                        </div>
-                    </Link>
-                    
-                    <Link to='/main' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">
-                                MainPage
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/career' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">
-                                Career
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/testpage' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">test
+                            <div className="keylabels">Q&A
                             </div>
                         </div>
                     </Link>

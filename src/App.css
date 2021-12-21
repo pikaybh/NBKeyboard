@@ -25,6 +25,10 @@
   margin: 0 40px 0 40px;
 }
 
+.dropbox {
+  display: none;
+}
+
 .Footer {
   width: 100%;
   display: flex;
@@ -99,6 +103,39 @@
 
 .menu-item:hover {
   color: black;
+}
+
+.bar {
+  list-style: none;
+  width: 100px;
+  z-index: 2;
+}
+
+.menu {
+  width: 120px;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  flex-direction: column;
+  padding: 0;
+  margin: 10px 0 0 0;
+  background-color: #eee;
+  transition: 10s;
+  z-index: 1;
+}
+
+.menu-list {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  text-align: start;
+  color: black;
+}
+
+.menu-list:hover {
+  background-color: gray;
+  color: #eee;
 }
 
 a {
@@ -239,4 +276,34 @@ hr {
   to {
     transform: rotate(360deg);
   }
+}
+
+.career {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.career-articles {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.career-section {
+  max-width: 50%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.career-span {
+  max-width: 80%;
+  margin: auto;
+}
+
+.titleImg {
+  max-width: 200px;
 }
