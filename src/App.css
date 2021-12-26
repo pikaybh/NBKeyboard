@@ -39,6 +39,15 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
+  .Header {
+    margin: 0 12px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
   .Nav {
     display: block;
   }
@@ -323,7 +332,7 @@ hr {
 }
 
 .mini-menu-list {
-  list-style: none;
+  list-style: square;
   font-size: 20px;
 }
 
