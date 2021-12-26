@@ -1,62 +1,92 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer4HP from '../components/Footer4HomePage';
-import $ from "jquery";
+import Draggable from "react-draggable";
 
 function HomePage() {
 
-    /*useEffect(() => {
-        $(".keycab").draggable({
-        });
-    });*/
+    const nodeRef = useRef(null);
 
-    class Foo extends React.Component {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
 
-        componentDidMount() {
-            $(".keycab").draggable({
-            });
-        }
+    const [Opacity, setOpacity] = useState(false);
 
-        render() {
-            return (
-                <div className="Foo">
-                    <button className="keycab">버튼</button>
-                </div>
-            );
-        }
-    }
+    const trackPos = (data) => {
+        setPosition({ x: data.x, y: data.y });
+    };
+
+    const handleStart = () => {
+        setOpacity(true);
+    };
+    const handleEnd = () => {
+        setOpacity(false);
+    };
 
     return (
         <div className="HomePage">
             <Header />
             <h1 className="homepage-title">Welcome to NBK!</h1>
+
             <div className="keyboard">
                 <div className="keylayout">
-                    <Link to='/intro' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">
-                                NBK<br/>소개
+                    <Draggable
+                        nodeRef={nodeRef}
+                        onDrag={(e, data) => trackPos(data)}
+                        onStart={handleStart}
+                        onStop={handleEnd}
+                    >
+                        <Link to="/intro"
+                            ref={nodeRef}
+                            className="keycab draggable"
+                            style={{ opacity: Opacity ? "0.6" : "1" }}
+                        >
+                            <div className="keyboarder">
+                                <div className="keylabels">
+                                    NBK<br/>소개
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                    <Link to='/products' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">
-                                Products
+                        </Link>
+                    </Draggable>
+                    <Draggable
+                        nodeRef={nodeRef}
+                        onDrag={(e, data) => trackPos(data)}
+                        onStart={handleStart}
+                        onStop={handleEnd}
+                    >
+                        <Link to='/products'
+                            ref={nodeRef}
+                            className="keycab draggable"
+                            style={{ opacity: Opacity ? "0.6" : "1" }}
+                        >
+                            <div className="keyboarder">
+                                <div className="keylabels">
+                                    Products
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                    <Link to='/contact' className="keycab">
-                        <div className="keyboarder">
-                            <div className="keylabels">Contact
+                        </Link>
+                    </Draggable>
+                    <Draggable
+                        nodeRef={nodeRef}
+                        onDrag={(e, data) => trackPos(data)}
+                        onStart={handleStart}
+                        onStop={handleEnd}
+                    >
+                        <Link to='/contact'
+                            ref={nodeRef}
+                            className="keycab draggable"
+                            style={{ opacity: Opacity ? "0.6" : "1" }}
+                        >
+                            <div className="keyboarder">
+                                <div className="keylabels">Contact
+                                </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
+                    </Draggable>
                     <Link to='/career' className="keycab">
                         <div className="keyboarder">
                             <div className="keylabels">
-                                NBK<br/>인원
+                                NBK<br />인원
                             </div>
                         </div>
                     </Link>
@@ -71,7 +101,7 @@ function HomePage() {
                     <Link to='/history' className="keycab">
                         <div className="keyboarder">
                             <div className="keylabels">
-                                회사<br/>연혁
+                                회사<br />연혁
                             </div>
                         </div>
                     </Link>
