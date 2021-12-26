@@ -48,8 +48,8 @@ hr {
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 99; /* Stay on top */
+  position: absolute; /* Stay in place */
+  z-index: 2; /* Stay on top */
   top: 0;
   right: 0;
   background-color: white; /* White*/
@@ -135,6 +135,7 @@ hr {
   bottom: 0;
   padding: 30px 0;
 }
+
 .copyrights {
   margin: auto;
   text-align: center;
@@ -150,6 +151,10 @@ hr {
   cursor: pointer;
   transition: 0.3s;
   transition-timing-function: ease-in-out;
+}
+
+.rights {
+  margin: 0 40px;
 }
 
 @media screen and (max-width: 768px) {
@@ -190,14 +195,18 @@ hr {
     border: 0.5px solid #ddd;
   }
 
+  .Footer4HP {
+    padding: 10px 0;
+  }
+
+  .rights {
+    margin: 0 12px;
+  }
+
   .copyrights {
-    width: 600px;
+    width: 100%;
     margin: 10px auto;
   }
-}
-
-.rights {
-  margin: 0 40px;
 }
 
 .footer-item {
@@ -225,7 +234,7 @@ hr {
   margin: 0 40px 0 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .menu-bar {
     flex-wrap: wrap;
   }
@@ -267,8 +276,16 @@ hr {
   transition-timing-function: ease-out;
 }
 
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 600px)  {
   .bar {
+    display: none;
+  }
+
+  .menu-content {
+    display: none;
+  }
+
+  .menu {
     display: none;
   }
 }
@@ -310,14 +327,10 @@ hr {
   font-size: 20px;
 }
 
-.sidenav {
-  position: absolute;
-  z-index: 2;
-}
-
 #main {
   height: 100%;
-  left:0;
+  width: 0;
+  right:0;
   top: 0;
   position: absolute;
   background-color: rgba(0,0,0,0.2);
@@ -341,6 +354,13 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 	animation: gradient 5s ease infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-title {
+    font-size: 24px;
+    margin-top: 50px;
+  }
 }
 
 @keyframes gradient {

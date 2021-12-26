@@ -78,7 +78,7 @@ function Header() {
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
         openNav() {
             if (matchMedia("Screen and (max-width: 600px)").matches) {
-                document.getElementById("sidenav").style.width = "300px";
+                document.getElementById("sidenav").style.width = "200px";
             } else {
                 document.getElementById("sidenav").style.width = "500px";
             }
