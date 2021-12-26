@@ -1,6 +1,10 @@
-.App {
-  height: 100vh;
+h1, h2, h3 {
   text-align: center;
+}
+
+hr {
+  background-color: #eee;
+  border: 0.5px solid #eee;
 }
 
 .logo {
@@ -25,17 +29,102 @@
   margin: 0 40px 0 40px;
 }
 
-.dropbox {
+.Nav {
   display: none;
 }
 
+.nav_button {
+  color: grey;
+
+}
+
+@media screen and (max-width: 600px) {
+  .Nav {
+    display: block;
+  }
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: white; /* White*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 12px 12px 12px 48px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav a {
+      padding: 8px 8px 8px 0;
+      font-size: 20px;
+  }
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
 .Footer {
+  position: relative;
   width: 100%;
+  padding: 30px 0;
+  bottom : 0;
+}
+
+.footer-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  bottom : 0;
-  padding: 30px 0;
+  max-width: 80%;
+  margin: auto;
+}
+
+.corp {
+  margin: 0;
+  font-size: 18px;
+  color: rgba(59,59,59,1);
+}
+
+.ceo-contact {
+  margin-top: 0;
+  text-align: start;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(59,59,59,1);
+}
+
+.hr-footer {
+  width: 80%;
+}
+
+.hr-footer-mobile {
+  display: none;
+  width: 95%;
 }
 
 .Footer4HP {
@@ -47,12 +136,58 @@
   padding: 30px 0;
 }
 .copyrights {
-  margin: 0 40px;
+  margin: auto;
+  text-align: center;
+  font-size: 13px;
+}
+
+.social-page {
+  padding: 0 3px;
+}
+
+.social-page:hover {
+  fill: black;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
   .Footer {
     padding: 10px 0;
+    background-color: #eee;
+  }
+
+  .hr-footer {
+    display: none;
+  }
+
+  .footer-section {
+    max-width: 95%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .corp {
+    font-size: 18px;
+  }
+
+  .ceo-contact {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .social-page {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+  }
+
+  .hr-footer-mobile {
+    display: block;
+    background-color: #ddd;
+    border: 0.5px solid #ddd;
   }
 
   .copyrights {
@@ -68,6 +203,10 @@
 .footer-item {
   color: black;
   text-decoration: underline;
+}
+
+.empty-space {
+  height: 200px;
 }
 
 .menu-bar {
@@ -99,6 +238,7 @@
 .menu-item {
   color: grey;
   transition: 0.3s;
+  transition-timing-function: ease-out;
 }
 
 .menu-item:hover {
@@ -111,17 +251,42 @@
   z-index: 2;
 }
 
-.menu {
-  width: 120px;
-  list-style: none;
+.career-bar:hover .career-menu {
   display: flex;
+}
+
+.products-bar:hover .products-menu {
+  display: flex;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.notice-bar:hover .contact-menu {
+  display: flex;
+  transition: 3s;
+  transition-timing-function: ease-out;
+}
+
+@media screen and (max-width: 768px)  {
+  .bar {
+    display: none;
+  }
+}
+
+.menu {
+  width: 140px;
+  list-style: none;
+  display: none;
   justify-content: start;
   position: absolute;
   flex-direction: column;
   padding: 0;
   margin: 10px 0 0 0;
   background-color: #eee;
-  transition: 10s;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  visibility: visible;
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
   z-index: 1;
 }
 
@@ -136,6 +301,27 @@
 .menu-list:hover {
   background-color: gray;
   color: #eee;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.mini-menu-list {
+  list-style: none;
+  font-size: 20px;
+}
+
+.sidenav {
+  position: absolute;
+  z-index: 2;
+}
+
+#main {
+  height: 100%;
+  left:0;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 a {
@@ -239,10 +425,6 @@ a {
   max-width: 30%;
 }
 
-hr {
-  max-width: 80%;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -278,10 +460,21 @@ hr {
   }
 }
 
+.intro {
+  display: flex;
+  align-items: center;
+  max-width: 75%;
+  margin: auto;
+}
+
 .career {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.career-title {
+  width: 100%;
 }
 
 .career-articles {
@@ -294,14 +487,87 @@ hr {
 .career-section {
   max-width: 50%;
   display: flex;
+  flex-direction: row;
+}
+
+.profile-img {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 15px;
+}
+
+.profile-name {
+  font-size: 16px;
+}
+
+.portfolio {
+  display: flex;
   justify-content: left;
   flex-direction: column;
   margin-top: 50px;
 }
 
-.career-span {
-  max-width: 80%;
-  margin: auto;
+.standing {
+  font-weight: 600;
+  color: grey;
+}
+
+.hr-career {
+  width: 90%;
+  margin-left: 0;
+}
+
+.career-p {
+  width: 90%;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .career-articles {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  
+  .career-section {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .profile-img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 30px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+  }
+  
+  .portfolio {
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  
+  .standing {
+    font-size: 20px;
+    font-weight: 600;
+    color: grey;
+  }
+  
+  .hr-career {
+    width: 100%;
+  }
+  
+  .career-p {
+    width: 100%;
+  }
 }
 
 .titleImg {

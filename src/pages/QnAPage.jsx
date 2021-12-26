@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 function QnA() {
     return (
-        <div className="QnA">
+        <div className="QnA Main">
             <Header />
             <h1>Q&A page</h1>
             <article className='questions'>
@@ -14,6 +14,7 @@ function QnA() {
                     <p className="context">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum debitis voluptates libero blanditiis sapiente facere tenetur? Ea voluptatum eius, numquam dolorem, voluptates ipsam ipsum eligendi, dolorum dolore sequi ratione quam.</p>
                 </section>
             </article>
+            <article className='empty-space'></article>
             <Footer />
         </div>
     );

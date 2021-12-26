@@ -5,7 +5,7 @@ import logo from '../assets/images/nobaku2.png';
 
 function ContactPage() {
     return (
-        <div className="ContactPage">
+        <div className="ContactPage Main">
             <Header />
             <h1>Contact</h1>
             <img className="titleImg" src={logo}/>
@@ -18,6 +18,7 @@ function ContactPage() {
                 <h3>추가적으로 협업 및 단체 자랑ㄱㄱ</h3>
                 <h3>단국대 어쩌구 여기다가 쓰면 될듯 ㅇㅇ</h3>
             </section>
+            <article className='empty-space'></article>
             <Footer />
         </div>
     );

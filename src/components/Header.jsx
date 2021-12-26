@@ -15,204 +15,104 @@ function Header() {
 
     let [menu, menuList] = useState(['NBK 소개', 'NBK 인원', '회사 연혁', 'NBKeyboard', 'Contact', '소식', '후기', 'Q&A']);
 
-    /*
-    class App extends Component {
-        state = {
-            open: false,
-        };
-        handleButtonClick = () => {
-            this.setState((state) => {
-                return {
-                    open: !state.open,
-                };
-            });
-        };
-        container = React.createRef();
-        state = {
-            open: false,
-        };
-        componentDidMount() {
-            document.addEventListener("mousedown", this.handleClickOutside);
-        }
-        componentWillUnmount() {
-            document.removeEventListener("mousedown", this.handleClickOutside);
-        }
-    }
-    handleClickOutside = (event) => {
-        if (
-            this.container.current &&
-            !this.container.current.contains(event.target)
-        ) {
-            this.setState({
-                open: false,
-            });
-        }
-    };
-    <div className="container">
-        <button type="button" class="button" onClick={this.handleButtonClick}>
-            ☰
-        </button>
-        {this.state.open && (
-            <div class="dropdown">
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
-                </ul>
-            </div>
-        )}
-    </div>
-    */
-
-
     class Career extends Component {
-        constructor() {
-            super();
-
-            this.state = {
-                showMenu: false,
-            }
-
-            this.showMenu = this.showMenu.bind(this);
-            this.hideMenu = this.hideMenu.bind(this);
-        }
-
-        showMenu(event) {
-            event.preventDefault();
-            this.setState({
-                showMenu: true,
-            });
-        }
-
-        hideMenu(event) {
-            event.preventDefault();
-            this.setState({
-                showMenu: false,
-            });
-        }
-
         render() {
             return (
-                <ul className="bar" onClick={this.showMenu}>
+                <ul className="bar career-bar">
                     <li className="menu-content">
-                        <Link to='#' className='menu-item' style={careerStyle}>career</Link>
+                        <Link to='/intro' className='menu-item' style={careerStyle}>career</Link>
                     </li>
-
-                    {
-                        this.state.showMenu
-                            ? (
-                                <ul className="menu career-menu">
-                                    <Link to='/intro' className="menu-list">{menu[0]}</Link>
-                                    <Link to='/career' className="menu-list">{menu[1]}</Link>
-                                    <Link to='/history' className="menu-list">{menu[2]}</Link>
-                                </ul>
-                            )
-                            : (
-                                null
-                            )
-                    }
+                    <ul className="menu career-menu">
+                        <Link to='/intro' className="menu-list">{menu[0]}</Link>
+                        <Link to='/career' className="menu-list">{menu[1]}</Link>
+                        <Link to='/history' className="menu-list">{menu[2]}</Link>
+                    </ul>
                 </ul>
             );
         }
     }
 
     class Products extends Component {
-        constructor() {
-            super();
-
-            this.state = {
-                showMenu: false,
-            }
-
-            this.showMenu = this.showMenu.bind(this);
-            this.hideMenu = this.hideMenu.bind(this);
-        }
-
-        showMenu(event) {
-            event.preventDefault();
-            this.setState({
-                showMenu: true,
-            });
-        }
-
-        hideMenu(event) {
-            event.preventDefault();
-            this.setState({
-                showMenu: false,
-            });
-        }
-
         render() {
             return (
-                <ul className="bar">
-                    <li className="menu-content" onClick={this.showMenu}>
-                        <Link to='#' className='menu-item' style={productsStyle}>products</Link>
+                <ul className="bar products-bar">
+                    <li className="menu-content">
+                        <Link to='/products' className='menu-item' style={productsStyle}>products</Link>
                     </li>
-                    {
-                        this.state.showMenu
-                            ? (
-                                <ul className="menu products-menu">
-                                    <Link to='/products' className="menu-list">{menu[3]}</Link>
-                                </ul>
-                            )
-                            : (
-                                null
-                            )
-                    }
+                    <ul className="menu products-menu">
+                        <Link to='/products' className="menu-list">{menu[3]}</Link>
+                    </ul>
                 </ul>
             );
         }
     }
 
     class Notice extends Component {
-        constructor() {
-            super();
+        render() {
+            return (
+                <ul className="bar notice-bar">
+                    <li className="menu-content">
+                        <Link to='/notice' className='menu-item' style={contactStyle}>notice</Link>
+                    </li>
+                    <ul className="menu contact-menu">
+                        <Link to='/contact' className="menu-list">{menu[4]}</Link>
+                        <Link to='/notice' className="menu-list">{menu[5]}</Link>
+                        <Link to='/review' className="menu-list">{menu[6]}</Link>
+                        <Link to='/questions' className="menu-list">{menu[7]}</Link>
+                    </ul>
+                </ul>
+            );
+        }
+    }
 
-            this.state = {
-                showMenu: false,
+    class Nav extends Component {
+        constructor(props) {
+            super(props);
+            this.state = {openNav: false};
+            this.state = {closeNav: true};
+
+            this.openNav = this.openNav.bind(this);
+            this.closeNav = this.closeNav.bind(this);
+        }
+
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        openNav() {
+            if (matchMedia("Screen and (max-width: 600px)").matches) {
+                document.getElementById("sidenav").style.width = "300px";
+            } else {
+                document.getElementById("sidenav").style.width = "500px";
             }
-
-            this.showMenu = this.showMenu.bind(this);
-            this.hideMenu = this.hideMenu.bind(this);
+            document.getElementById("main").style.width = "100%";
         }
 
-        showMenu(event) {
-            event.preventDefault();
-            this.setState({
-                showMenu: true,
-            });
-        }
-
-        hideMenu(event) {
-            event.preventDefault();
-            this.setState({
-                showMenu: false,
-            });
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+            document.getElementById("main").style.width = "0";
         }
 
         render() {
             return (
-                <ul className="bar" onClick={this.showMenu}>
-                    <li className="menu-content">
-                        <Link to='#' className='menu-item' style={contactStyle}>notice</Link>
-                    </li>
-
-                    {
-                        this.state.showMenu
-                            ? (
-                                <ul className="menu contact-menu">
-                                    <Link to='/contact' className="menu-list">{menu[4]}</Link>
-                                    <Link to='/notice' className="menu-list">{menu[5]}</Link>
-                                    <Link to='/review' className="menu-list">{menu[6]}</Link>
-                                    <Link to='/questions' className="menu-list">{menu[7]}</Link>
-                                </ul>
-                            )
-                            : (
-                                null
-                            )
-                    }
-                </ul>
+                <div className="Nav">
+                    <nav id="sidenav" className="sidenav">
+                        <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
+                        <ul className="mini-menu-bar">
+                            <li className="mini-menu-list">소개</li>
+                            <Link to='/intro'>{menu[0]}</Link>
+                            <Link to='/career'>{menu[1]}</Link>
+                            <Link to='/history'>{menu[2]}</Link>
+                            <li className="mini-menu-list">제품</li>
+                            <Link to='/products'>{menu[3]}</Link>
+                            <li className="mini-menu-list">게시판</li>
+                            <Link to='/contact'>{menu[4]}</Link>
+                            <Link to='/notice'>{menu[5]}</Link>
+                            <Link to='/review'>{menu[6]}</Link>
+                            <Link to='/questions'>{menu[7]}</Link>
+                        </ul>
+                    </nav>
+                    <div id="main" onClick={this.closeNav}></div>
+                    <span className="nav_btn material-icons md-36" onClick={this.openNav}>menu</span>                    
+                </div>
             );
         }
     }
@@ -221,10 +121,10 @@ function Header() {
         <div className="Header">
             <Link to="/"><NBKlogo className="logo" width="60" height="60" /></Link>
             <ul className="menu-bar">
-                
                 <Career />
                 <Products />
                 <Notice />
+                <Nav />
             </ul>
         </div>
     );

@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer4HP from '../components/Footer4HomePage';
+import $ from "jquery";
 
 function HomePage() {
+
+    /*useEffect(() => {
+        $(".keycab").draggable({
+        });
+    });*/
+
+    class Foo extends React.Component {
+
+        componentDidMount() {
+            $(".keycab").draggable({
+            });
+        }
+
+        render() {
+            return (
+                <div className="Foo">
+                    <button className="keycab">버튼</button>
+                </div>
+            );
+        }
+    }
+
     return (
         <div className="HomePage">
             <Header />
