@@ -235,6 +235,12 @@ hr {
   height: 200px;
 }
 
+@media screen and (max-width: 768px) {
+  .empty-space {
+    height: 120px;
+  }
+}
+
 .menu-bar {
   list-style: none;
   display: flex;
@@ -604,6 +610,46 @@ a {
   
   .career-p {
     width: 100%;
+  }
+}
+
+.notice-title {
+  display: block;
+  text-align: start !important;
+  font-weight: 500;
+  margin: 10px 0 10px 0;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid black;
+}
+
+.notice-section {
+  width: 70%;
+  margin: auto;
+}
+
+.bulletinBoard {
+  border-bottom: 1.5px solid #eee;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.noticeList {
+  align-items: left;
+  width: 100%;
+}
+
+.boardList {
+  position: relative;
+  display: block;
+  padding: 12px 8px;
+  color: #818181;
+}
+
+@media screen and (max-width: 768px) {
+  .notice-section {
+    width: 95%;
   }
 }
 
