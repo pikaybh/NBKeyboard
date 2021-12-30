@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 function QnA() {
+    let [questions, questionList] = useState(['Foo', 'Bar', 'Baz']);
+
     return (
         <div className="QnA Main">
             <Header />
-            <h1>Q&A page</h1>
-            <article className='questions'>
-                <section>
-                    <h2>자주 묻는 질문</h2>
-                    <h3>여기에는 자주 묻는 질문 들을 작성</h3>
-                    <p className="context">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum debitis voluptates libero blanditiis sapiente facere tenetur? Ea voluptatum eius, numquam dolorem, voluptates ipsam ipsum eligendi, dolorum dolore sequi ratione quam.</p>
+            <article className='empty-space'/>
+            <article className='QnA'>
+                <section className='notice-section'>
+                    <h1 className='notice-title'>자주 묻는 질문</h1>
+                    <table className="noticeList">
+                        <tr className="bulletinBoard">Q&A</tr>
+                        <hr className='question-hr' />
+                        <tr className="questionList">{questions[0]}</tr>
+                        <hr className='question-hr' />
+                        <tr className="questionList">{questions[1]}</tr>
+                        <hr className='question-hr' />
+                        <tr className="questionList">{questions[2]}</tr>
+                        <hr className='question-hr' />
+                    </table>
                 </section>
             </article>
-            <article className='empty-space'></article>
+            <article className='empty-space'/>
             <Footer />
         </div>
     );
