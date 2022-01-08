@@ -758,6 +758,7 @@ a {
 }
 
 .required-mark {
+  text-decoration: none;
   color: #e73c7e;
   font-weight: 700;
 }
