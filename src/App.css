@@ -663,3 +663,138 @@ a {
 .titleImg {
   max-width: 200px;
 }
+
+@media screen and (max-width: 768px) {
+  .titleImg {
+    width: 50%;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+
+.NBK {
+  font-size: 75px;
+  font-style: italic;
+  margin: auto;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	animation: gradient 60s ease infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .NBK {
+    font-size: 50px;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.변수 {
+  display: flex;
+  justify-content: center;
+}
+
+.mailing {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.form-input {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  border-bottom: solid 1px black;
+  padding: 8px;
+}
+
+.contact-input {
+  width: 65px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.feedback-input {
+  padding-bottom: 0 !important;
+}
+
+.privacy {
+  height: 150px;
+  border: solid grey 1px;
+  color: grey;
+  font-size: small;
+  overflow-y: auto;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.required-mark {
+  color: #e73c7e;
+  font-weight: 700;
+}
+
+.btn--submit {
+  border: none;
+  border-radius: 21px;
+  margin-top: 20px;
+  padding: 12px 14px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
+.btn--submit:hover {
+  background-color: black;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .mailing {
+    width: 90%;
+  }
+}
+
+.cooperation {
+  margin-top: 50px;
+}
+
+.cooperation-hr {
+  width: 30%;
+}
+
+.cooperation-logos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+}
