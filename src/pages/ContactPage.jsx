@@ -9,7 +9,7 @@ function ContactPage() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_7su6j5s', 'template_qv4eflo', form.current, 'user_V5dcvmc5w11f4CaxDjNT7')
+        emailjs.sendForm('service_v0ur1k7', 'template_zbt5zwk', form.current, 'user_72Uf9jwk6GKV4glPxR5Yi')
             .then((result) => {
                 console.log(result.text);
                 alert("이메일이 정상적으로 전송되었습니다.\n이용해주셔서 감사합니다.");
@@ -20,9 +20,6 @@ function ContactPage() {
     };
 
     class Mail extends Component {
-
-        
-
         render() {
             return (
                 <form className='mailing' ref={form} onSubmit={sendEmail} >
