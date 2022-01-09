@@ -21,9 +21,9 @@ function Footer() {
                     <h5 className="corp">NBK(엔비케이)</h5>
                     <p className="ceo-contact">
                         CEO : 박태경<br/>
-                        Business License : ###-##-##### | 2022-?????-####<br/>
+                        Business License : ###-##-##### | 2022-#####-####<br/>
                         Address : 경기도 수원시 행궁동 ...<br/>
-                        Contact : 이메일@naver.com | 010-####-####
+                        Contact : groupnbk2022@gmail.com | 010-3354-3917
                     </p>
                 </div>
                 <div className="share-btn">

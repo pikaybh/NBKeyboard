@@ -119,7 +119,7 @@ function Header() {
 
     return (
         <div className="Header">
-            <Link to="/"><NBKlogo className="logo" width="60" height="60" /></Link>
+            <Link className="head" to="/"><NBKlogo className="logo" width="60" height="60" /><h1 className="NBK-name">NBK</h1></Link>
             <ul className="menu-bar">
                 <Career />
                 <Products />

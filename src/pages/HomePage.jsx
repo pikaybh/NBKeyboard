@@ -118,7 +118,6 @@ function HomePage() {
     
         <div className="HomePage">
             <Header />
-            <h1 className="homepage-title">Welcome to NBK!</h1>
 
             <div className="keyboard">
                 <div className="keylayout">

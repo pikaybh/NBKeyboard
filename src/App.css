@@ -37,6 +37,25 @@ hr {
   margin: 0 40px 0 40px;
 }
 
+.head {
+  display: flex;
+}
+
+.NBK-name {
+  font-size: 48px;
+  font-style: italic;
+  margin: auto auto -3px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .NBK-name {
+    font-size: 34px;
+    margin: auto auto 0 6px;
+  }
+}
+
 .Nav {
   display: none;
 }
