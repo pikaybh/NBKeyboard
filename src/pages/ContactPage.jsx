@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import logo from '../assets/images/nobaku2.png';
+import dkuciee from '../assets/images/DKUCIEE1.png';
 
 function ContactPage() {
     const form = useRef();
@@ -141,7 +142,9 @@ function ContactPage() {
                 <h2 className="cooperation">협력체</h2>
                 <hr className='cooperation-hr' />
                 <section className='cooperation-logos'>
-                    <img className="titleImg" src={logo} />
+                    <a href="https://cms.dankook.ac.kr/web/abeek">
+                        <img className="titleImg" src={dkuciee} />
+                    </a>
                     <img className="titleImg" src={logo} />
                     <img className="titleImg" src={logo} />
                     <img className="titleImg" src={logo} />

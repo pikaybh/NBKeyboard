@@ -18,11 +18,11 @@ function Footer() {
         <hr className="hr-footer" />
             <div className="footer-section">
                 <div className="info">
-                    <h5 className="corp">NBK(엔비케이)</h5>
+                    <h5 className="corp">the NBK(더 엔비케이)</h5>
                     <p className="ceo-contact">
                         CEO : 박태경<br/>
-                        Business License : ###-##-##### | 2022-#####-####<br/>
-                        Address : 경기도 수원시 행궁동 ...<br/>
+                        Business License : 580-13-01693<br/>
+                        Address : 충청남도 천안시 동남구 단대로 119 <br/>
                         Contact : groupnbk2022@gmail.com | 010-3354-3917
                     </p>
                 </div>
@@ -33,10 +33,12 @@ function Footer() {
             </div>
             <hr className="hr-footer-mobile" />
             <div className="copyrights">
-                <Link to='/' className='footer-item'>NBK</Link> © {year}
+                <Link to='/' className='footer-item'>the NBK</Link> © {year}
             </div>
         </div>
     );
 }
 
 export default Footer;
+
+// | 2022-#####-####

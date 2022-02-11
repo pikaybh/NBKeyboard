@@ -13,7 +13,7 @@ function Footer4HP() {
                 <Youtube className="social-page" width="30" height="30" fill="grey" />
             </div>
             <div className="rights">
-                <Link to='/' className='footer-item'>NBK</Link> © {year}
+                <Link to='/' className='footer-item'>the NBK</Link> © {year}
             </div>
         </div>
     );

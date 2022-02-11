@@ -13,7 +13,7 @@ function Header() {
         contactStyle = { color: 'black' };
     }
 
-    let [menu, menuList] = useState(['NBK 소개', 'NBK 인원', '회사 연혁', 'NBKeyboard', 'Contact', '소식', '후기', 'Q&A']);
+    let [menu, menuList] = useState(['NBK 소개', 'NBK 인원', '회사 연혁(삭제)', 'NBKeyboard', 'Contact', '소식', '후기', 'Q&A']);
 
     class Career extends Component {
         render() {
